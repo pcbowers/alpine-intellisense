@@ -1,6 +1,6 @@
 # alpine-intellisense
 
-![`alpine-intellisense` Example](https://raw.githubusercontent.com/pcbowers/alpine-intellisense/main/src/assets/example.gif)
+![`alpine-intellisense` Example](https://raw.githubusercontent.com/pcbowers/alpine-intellisense/main/assets/example.gif)
 
 ## Features
 
