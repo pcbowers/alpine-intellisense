@@ -214,7 +214,7 @@ export default {
     description: "Modifier for Alpine.js.\n\nApply the opacity transition only."
   },
   ".scale (x-modifier)": {
-    prefix: ".opacity",
+    prefix: ".scale",
     body: [".scale.${1:90}"],
     description: "Modifier for Alpine.js.\n\nApply the scale transition only."
   },

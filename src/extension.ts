@@ -71,8 +71,6 @@ export function activate(context: ExtensionContext) {
   try {
     if (!existsSync(__dirname + "/../snippets/snippets.code-snippets")) {
       generateSnippets()
-    } else {
-      generateSnippets()
     }
   } catch (err) {
     console.error(err)
