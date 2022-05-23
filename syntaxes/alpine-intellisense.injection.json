@@ -1,5 +1,5 @@
 {
-  "scopeName": "alpinejs.injection",
+  "scopeName": "alpine-intellisense.injection",
   "injectionSelector": ["L:text.html"],
   "patterns": [
     {
@@ -15,13 +15,13 @@
           "name": "entity.other.attribute-name.html"
         },
         "1": {
-          "name": "alpinejs.directive.name"
+          "name": "alpine-intellisense.directive.name"
         },
         "2": {
-          "name": "alpinejs.directive.event"
+          "name": "alpine-intellisense.directive.event"
         },
         "3": {
-          "name": "alpinejs.directive.modifier"
+          "name": "alpine-intellisense.directive.modifier"
         }
       },
       "end": "(?=\\s*+[^=\\s])",

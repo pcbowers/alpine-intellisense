@@ -12,4 +12,4 @@ This extension aims to keep as small a footprint as possible by injecting a simp
 
 This extension contributes the following settings:
 
-- `alpinejs.settings.languageScopes`: Defines the language scopes for which the snippets will be available.<br />Use comma separated values. For example: `html,php,twig,nunjucks`.<br />Default is `html`.
+- `alpine-intellisense.settings.languageScopes`: Defines the language scopes for which the snippets will be available.<br />Use comma separated values. For example: `html,php,twig,nunjucks`.<br />Default is `html`.

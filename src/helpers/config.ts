@@ -6,7 +6,7 @@ export type ExtensionSettings = {
 
 export const config = () =>
   workspace.getConfiguration(
-    "alpinejs.settings"
+    "alpine-intellisense.settings"
   ) as unknown as ExtensionSettings
 
 export default config

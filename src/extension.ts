@@ -1,10 +1,4 @@
-import {
-  ConfigurationChangeEvent,
-  commands,
-  ExtensionContext,
-  window,
-  workspace
-} from "vscode"
+import { ConfigurationChangeEvent, commands, window, workspace } from "vscode"
 
 import { existsSync, writeFile } from "fs"
 import { config } from "./helpers/config"
@@ -38,7 +32,7 @@ const generateSnippets = () =>
 const showRestartMessage = async ({
   affectsConfiguration
 }: ConfigurationChangeEvent) => {
-  if (affectsConfiguration("alpinejs")) {
+  if (affectsConfiguration("alpine-intellisense")) {
     console.info(
       "alpine-intellisense: triggered refresh by changing extension configuration"
     )
@@ -48,7 +42,7 @@ const showRestartMessage = async ({
     setTimeout(() => {
       window
         .showWarningMessage(
-          "Alpine.js Intellisense: Please restart VS Code to apply any configuration changes.",
+          "Alpine.js IntelliSense: Please restart VS Code to apply any configuration changes.",
           "Restart VS Code",
           "Ignore"
         )
@@ -63,7 +57,7 @@ const showRestartMessage = async ({
   }
 }
 
-export function activate(context: ExtensionContext) {
+export function activate() {
   console.info("alpine-intellisense: beginning activation...")
 
   workspace.onDidChangeConfiguration(showRestartMessage)

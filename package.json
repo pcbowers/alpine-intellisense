@@ -1,6 +1,6 @@
 {
   "name": "alpine-intellisense",
-  "displayName": "alpine-intellisense",
+  "displayName": "Alpine.js IntelliSense",
   "description": "IntelliSense for Alpine.js",
   "version": "1.0.0",
   "publisher": "pcbowers",
@@ -38,7 +38,7 @@
     "configuration": {
       "title": "Alpine.js IntelliSense",
       "properties": {
-        "alpinejs.settings.languageScopes": {
+        "alpine-intellisense.settings.languageScopes": {
           "type": "string",
           "markdownDescription": "Defines the language scopes for which the snippets will be available.\nUse comma separated values. For example: `html,php,twig,nunjucks`.\nDefault is `html`.",
           "default": "html"
@@ -47,8 +47,8 @@
     },
     "grammars": [
       {
-        "scopeName": "alpinejs.injection",
-        "path": "./syntaxes/alpinejs.injection.json",
+        "scopeName": "alpine-intellisense.injection",
+        "path": "./syntaxes/alpine-intellisense.injection.json",
         "injectTo": [
           "text.html"
         ],
