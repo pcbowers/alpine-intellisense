@@ -21,11 +21,11 @@
           "name": "alpine-intellisense.directive.event"
         },
         "3": {
-          "name": "alpine-intellisense.directive.modifier"
+          "name": ".modifier"
         }
       },
       "end": "(?=\\s*+[^=\\s])",
-      "name": "meta.attribute.event-handler.click.html",
+      "name": "alpine-intellisense.directive",
       "patterns": [
         {
           "begin": "=",
