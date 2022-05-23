@@ -1,0 +1,70 @@
+{
+  "name": "alpine-intellisense",
+  "displayName": "alpine-intellisense",
+  "description": "Intellisense for Alpine.js",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.67.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:html",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Alpine.js IntelliSense",
+      "properties": {
+        "alpinejs.settings.languageScopes": {
+          "type": "string",
+          "markdownDescription": "Defines the language scopes for which the snippets will be available.\nUse comma separated values. For example: `html,php,twig,nunjucks`.\nDefault is `html`.",
+          "default": "html"
+        }
+      }
+    },
+    "grammars": [
+      {
+        "scopeName": "alpinejs.injection",
+        "path": "./syntaxes/alpinejs.injection.json",
+        "injectTo": [
+          "text.html"
+        ],
+        "embeddedLanguages": {
+          "source.js": "javascript"
+        }
+      }
+    ],
+    "html": {
+      "customData": [
+        "./syntaxes/html.html-data.json"
+      ]
+    },
+    "snippets": [
+      {
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.67.0",
+    "@types/glob": "^7.2.0",
+    "@types/node": "14.x",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "glob": "^8.0.1",
+    "typescript": "^4.6.4"
+  }
+}

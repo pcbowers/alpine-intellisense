@@ -1,0 +1,291 @@
+{
+  "version": 1.1,
+  "globalAttributes": [
+    {
+      "name": "x-data",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-data`\n\nDefines a chunk of HTML as an Alpine component and provides the reactive data for that component to reference.\n\nHere's an example of a contrived dropdown component:\n\n```\n<div x-data=\"{ open: false }\">\n\t<button @click=\"open = ! open\">Toggle Content</button>\n\n\t<div x-show=\"open\">\n\t\tContent...\n\t</div>\n</div>\n```"
+      },
+      "references": [
+        {
+          "name": "Apline.js `x-data` directive",
+          "url": "https://alpinejs.dev/directives/data"
+        }
+      ]
+    },
+    {
+      "name": "x-init",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-init`\n\nAllows you to hook into the initialization phase of any element in Alpine.\n\n```\n<div x-init=\"console.log('I\\'m being initialized!')\"></div>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-init` directive",
+          "url": "https://alpinejs.dev/directives/init"
+        }
+      ]
+    },
+    {
+      "name": "x-show",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-show`\n\nOne of the most useful and powerful directives in Alpine. It provides an expressive way to show and hide DOM elements.\n\n```\n<div x-data=\"{ open: false }\">\n\t<button x-on:click=\"open = ! open\">Toggle Dropdown</button>\n\n\t<div x-show=\"open\">\n\t\tDropdown Contents...\n\t</div>\n</div>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-show` directive",
+          "url": "https://alpinejs.dev/directives/show"
+        }
+      ]
+    },
+    {
+      "name": "x-bind:",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-bind`\n\nShorthand: `:`\n\nAllows you to set HTML attributes on elements based on the result of JavaScript expressions.\n\nFor example, here's a component where we will use `x-bind` to set the placeholder value of an input.\n\n```\n<div x-data=\"{ placeholder: 'Type here...' }\">\n\t<input type=\"text\" x-bind:placeholder=\"placeholder\">\n</div>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-bind` directive",
+          "url": "https://alpinejs.dev/directives/bind"
+        }
+      ]
+    },
+    {
+      "name": "x-bind:class",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-bind:class`\n\nShorthand: `:class`\n\nBehaves differently than other bound attributes under the hood. `x-bind:class` does not overwrite any existing class attributes, and provides a special class object syntax (that allows overrides).\n\n```\n<div :class=\"{ 'hidden': ! show }\">\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-bind:class` directive",
+          "url": "https://alpinejs.dev/directives/bind#class-object-syntax"
+        }
+      ]
+    },
+    {
+      "name": "x-bind:style",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-bind:style`\n\nShorthand: `:style`\n\nBehaves differently than other bound attributes under the hood. `x-bind:style` does not overwrite any existing style attributes, and provides a special class object syntax (that allows overrides).\n\n```\n<div :style=\"true && { color: 'red' }\">\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-bind:style` directive",
+          "url": "https://alpinejs.dev/directives/bind#binding-styles"
+        }
+      ]
+    },
+    {
+      "name": "x-on:",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-on:`\n\nShorthand: `@`\n\nAllows you to easily run code on dispatched DOM events.\n\nHere's an example of simple button that shows an alert when clicked.\n\n```\n<button x-on:click=\"alert('Hello World!')\">Say Hi</button>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-on` directive",
+          "url": "https://alpinejs.dev/directives/on"
+        }
+      ]
+    },
+    {
+      "name": "x-on:keyup",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-on:keyup`\n\nShorthand: `@keyup`\n\nAlpine makes it easy to listen for keyup events on specific keys.\n\nHere's an example of listening for the Enter key inside an input element.\n\n```\n<input type=\"text\" @keyup.enter=\"alert('Submitted!')\">\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-on:keyup` directive",
+          "url": "https://alpinejs.dev/directives/on#keyboard-events"
+        }
+      ]
+    },
+    {
+      "name": "x-on:keydown",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-on:keydown`\n\nShorthand: `@keydown`\n\nAlpine makes it easy to listen for keydown events on specific keys.\n\nHere's an example of listening for the Enter key inside an input element.\n\n```\n<input type=\"text\" @keydown.enter=\"alert('Submitted!')\">\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-on:keydown` directive",
+          "url": "https://alpinejs.dev/directives/on#keyboard-events"
+        }
+      ]
+    },
+    {
+      "name": "x-text",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-text`\n\nSets the text content of an element to the result of a given expression.\n\nHere's a basic example of using `x-text` to display a user's username.\n\n```\n<div x-data=\"{ username: 'calebporzio' }\">\n\tUsername: <strong x-text=\"username\"></strong>\n</div>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-text` directive",
+          "url": "https://alpinejs.dev/directives/text"
+        }
+      ]
+    },
+    {
+      "name": "x-html",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-html`\n\nSets the \"innerHTML\" property of an element to the result of a given expression.\n\n⚠️ Only use on trusted content and never on user-provided content. ⚠️ Dynamically rendering HTML from third parties can easily lead to XSS vulnerabilities\n\nHere's a basic example of using `x-html` to display a user's username.\n\n```\n<div x-data=\"{ username: '<strong>calebporzio</strong>' }\">\n\tUsername: <span x-html=\"username\"></span>\n</div>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-html` directive",
+          "url": "https://alpinejs.dev/directives/html"
+        }
+      ]
+    },
+    {
+      "name": "x-model",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-model`\n\nAllows you to bind the value of an input element to Alpine data.\n\nHere's a simple example of using `x-model` to bind the value of a text field to a piece of data in Alpine.\n\n```\n<div x-data=\"{ message: '' }\">\n\t<input type=\"text\" x-model=\"message\">\n\n\t<span x-text=\"message\">\n</div>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-model` directive",
+          "url": "https://alpinejs.dev/directives/model"
+        }
+      ]
+    },
+    {
+      "name": "x-modelable",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-modelable`\n\nAllows you to expose any Alpine property as the target of the x-model directive.\n\nHere's a simple example of using `x-modelable` to expose a variable for binding with x-model.\n\n```\n<div x-data=\"{ number: 5 }\">\n\t<div x-data=\"{ count: 0 }\" x-modelable=\"count\" x-model=\"number\">\n\t\t<button @click=\"count++\">Increment</button>\n\t</div>\n\n\tNumber: <span x-text=\"number\"></span>\n</div>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-modelable` directive",
+          "url": "https://alpinejs.dev/directives/modelable"
+        }
+      ]
+    },
+    {
+      "name": "x-for",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-for`\n\nAllows you to create DOM elements by iterating through a list.\n\nHere's a simple example of using it to create a list of colors based on an array.\n\n```\n<ul x-data=\"{ colors: ['Red', 'Orange', 'Yellow'] }\">\n\t<template x-for=\"color in colors\">\n\t\t<li x-text=\"color\"></li>\n\t</template>\n</ul>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-for` directive",
+          "url": "https://alpinejs.dev/directives/for"
+        }
+      ]
+    },
+    {
+      "name": "x-transition",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-transition`\n\nAlpine provides a robust transitions utility out of the box. With a few `x-transition` directives, you can create smooth transitions between when an element is shown or hidden.\n\nOffers baked in capabilities for `duration`, `delay`, `scale`, and `opacity` along with the ability to set different transitions at different transition hooks.\n\nThe following contrived example uses both the baked in directives and TailwindCSS classes, but any class/directive combination can be used:\n\n```\n<div x-data=\"{ open: false }\">\n\t<button @click=\"open = ! open\">Toggle</button>\n\n\t<div\n\t\tx-show=\"open\"\n\t\tx-transition:enter=\"transition ease-out duration-300\"\n\t\tx-transition:enter-start=\"opacity-0 scale-90\"\n\t\tx-transition:enter-end=\"opacity-100 scale-100\"\n\t\tx-transition:leave.duration.300ms.scale.100\n\t\tx-transition:leave-start=\"opacity-100 scale-100\"\n\t\tx-transition:leave-end.scale.90\n\t>Hello 👋</div>\n</div>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-transition` directive",
+          "url": "https://alpinejs.dev/directives/transition"
+        }
+      ]
+    },
+    {
+      "name": "x-effect",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-effect`\n\nA useful directive for re-evaluating an expression when one of its dependencies change. You can think of it as a watcher where you don't have to specify what property to watch, it will watch all properties used within it.\n\nIf this definition is confusing for you, that's ok. It's better explained through an example:\n\n```\n<div x-data=\"{ label: 'Hello' }\" x-effect=\"console.log(label)\">\n\t<button @click=\"label += ' World!'\">Change Message</button>\n</div>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-effect` directive",
+          "url": "https://alpinejs.dev/directives/effect"
+        }
+      ]
+    },
+    {
+      "name": "x-ignore",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-ignore`\n\nIf for some reason, you don't want Alpine to touch a specific section of your HTML, you can prevent it from doing so using `x-ignore`.\n\n```\n<div x-data=\"{ label: 'From Alpine' }\">\n\t<div x-ignore>\n\t\t<span x-text=\"label\"></span>\n\t</div>\n</div>\n```\n\nIn the above example, the `<span>` tag will not contain \"From Alpine\" because we told Alpine to ignore the contents of the `div` completely."
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-ignore` directive",
+          "url": "https://alpinejs.dev/directives/ignore"
+        }
+      ]
+    },
+    {
+      "name": "x-ref",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-ref`\n\n`x-ref` in combination with `$refs` is a useful utility for easily accessing DOM elements directly. It's most useful as a replacement for APIs like `getElementById` and `querySelector`.\n\n```\n<button @click=\"$refs.text.remove()\">Remove Text</button>\n\n<span x-ref=\"text\">Hello 👋</span>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-ref` directive",
+          "url": "https://alpinejs.dev/directives/ref"
+        }
+      ]
+    },
+    {
+      "name": "x-cloak",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-cloak`\n\nHides the element it's attached to until Alpine is fully loaded on the page.\n\nFor `x-cloak` to work however, you must add the following CSS to the page.\n\n```css\n[x-cloak] { display: none !important; }\n```\n\nNow, the following example will hide the `<span>` tag until Alpine has set its text content to the `message` property.\n\n```\n<span x-cloak x-text=\"message\"></span>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-cloak` directive",
+          "url": "https://alpinejs.dev/directives/cloak"
+        }
+      ]
+    },
+    {
+      "name": "x-teleport",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-teleport`\n\nAllows you to transport part of your Alpine template to another part of the DOM on the page entirely.\n\nThis is useful for things like modals (especially nesting them), where it's helpful to break out of the z-index of the current Alpine component."
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-teleport` directive",
+          "url": "https://alpinejs.dev/directives/teleport"
+        }
+      ]
+    },
+    {
+      "name": "x-if",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-if`\n\nUsed for toggling elements on the page, similarly to `x-show`, however it completely adds and removes the element it's applied to rather than just changing its CSS display property to \"none\".\n\nBecause of this difference in behavior, `x-if` should not be applied directly to the element, but instead to a `<template>` tag that encloses the element. This way, Alpine can keep a record of the element once it's removed from the page.\n\n```\n<template x-if=\"open\">\n\t<div>Contents...</div>\n</template>\n```"
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-if` directive",
+          "url": "https://alpinejs.dev/directives/if"
+        }
+      ]
+    },
+    {
+      "name": "x-id",
+      "description": {
+        "kind": "markdown",
+        "value": "## `x-id`\n\nAllows you to declare a new \"scope\" for any new IDs generated using `$id()`. It accepts an array of strings (ID names) and adds a suffix to each `$id('...')` generated within it that is unique to other IDs on the page.\n\n`x-id` is meant to be used in conjunction with the `$id(...)` magic."
+      },
+      "references": [
+        {
+          "name": "Alpine.js `x-id` directive",
+          "url": "https://alpinejs.dev/directives/id"
+        }
+      ]
+    }
+  ]
+}
