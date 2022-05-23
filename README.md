@@ -1,4 +1,4 @@
-# alpine-intellisense
+# IntelliSense for Alpine.js
 
 ![`alpine-intellisense` Example](https://raw.githubusercontent.com/pcbowers/alpine-intellisense/main/assets/example.gif)
 
