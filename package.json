@@ -2,7 +2,7 @@
   "name": "alpine-intellisense",
   "displayName": "Alpine.js IntelliSense",
   "description": "IntelliSense for Alpine.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "pcbowers",
   "repository": {
     "type": "git",
