@@ -1,6 +1,6 @@
 {
   "scopeName": "alpine-intellisense.injection",
-  "injectionSelector": ["L:text.html"],
+  "injectionSelector": ["L:meta.tag -meta.attribute"],
   "patterns": [
     {
       "include": "#mark-as-js"
